@@ -1,6 +1,6 @@
-html, body {
-    overflow-x: hidden; /* Corta qualquer elemento que tente vazar para a direita ou esquerda */
-    width: 100%; /* Trava a largura da página exatamente no tamanho da tela */
+body {
+    overflow-x: hidden; 
+    width: 100%; 
     margin: 0;
     padding: 0;
 }
