@@ -1,0 +1,267 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary-dark: #0A1424; /* Azul escuro do botão do header */
+    --color-text-white: #FFFFFF;
+    --color-text-gray: #D1D5DB;
+    --color-text-blue-light: #8FA3B8;
+    --font-main: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-white);
+    background-color: var(--color-primary-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+}
+
+/* ================= HEADER GLOBAL ================= */
+.header {
+    position: absolute; /* Faz o header flutuar sobre o fundo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ajuste se a sua logo for maior ou menor */
+    width: auto;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 32px;
+}
+
+.navbar a {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-text-gray);
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover, 
+.navbar a.active {
+    color: var(--color-text-white);
+}
+
+/* Estilo do Botão "Entre em Contato" do Header */
+.btn-primary-header {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+    color: var(--color-text-white);
+    padding: 10px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda fina clara */
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-header:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #FFFFFF;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: #0A1424; /* Azul bem escuro do protótipo */
+    padding: 80px 0 40px 0; /* Respiro em cima e embaixo */
+    color: #FFFFFF;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.footer-logo img {
+    height: 45px;
+    width: auto;
+}
+
+/* Container que segura as 3 colunas da direita */
+.footer-links {
+    display: flex;
+    gap: 100px; /* Distância grande entre as colunas */
+}
+
+/* Cada Coluna */
+.footer-column h4 {
+    font-size: 11px;
+    color: #6486AD; /* Azul claro do título */
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.footer-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento vertical entre os links */
+}
+
+.footer-column a {
+    font-size: 14px;
+    color: #EAECEF; /* Branco meio acinzentado */
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #FFFFFF;
+}
+
+/* Base do Footer (Endereço e LinkedIn) */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08); /* Linha divisória bem suave */
+    padding-top: 30px;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #4A6C94; /* Azul mais opaco para o endereço */
+    font-weight: 300;
+}
+
+/* Ícone do LinkedIn */
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #4A6C94; /* Mesma cor do endereço */
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+/* =========================================================================
+   =================== CORREÇÃO MOBILE GLOBAL (HEADER E FOOTER) ==============
+   ========================================================================= */
+
+@media (max-width: 768px) {
+    
+    /* Garante o respiro nas bordas em todas as páginas */
+    .container {
+        padding: 0 20px;
+    }
+
+    /* ================= HEADER MOBILE ================= */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .navbar ul {
+        flex-direction: row; /* Mantém os links lado a lado */
+        flex-wrap: wrap; /* Se faltar espaço, joga para a linha de baixo */
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    /* Esconde o botão de "Entre em contato" no header para não poluir a telinha */
+    .btn-primary-header {
+        display: none; 
+    }
+
+    /* ================= FOOTER MOBILE ================= */
+    .footer {
+        padding: 60px 0 30px 0;
+    }
+
+    /* Empilha a Logo em cima e o bloco de Links embaixo */
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 50px; 
+        margin-bottom: 40px;
+    }
+
+    /* Centraliza a logo */
+    .footer-logo img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Empilha as 3 colunas (Navegação, Serviços, Contato) uma embaixo da outra */
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+    }
+
+    /* Garante que o texto de cada coluna fique centralizado */
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-column ul {
+        padding: 0;
+        align-items: center;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 15px;
+    }
+
+    /* Seção final com endereço e ícone do LinkedIn */
+    .footer-bottom {
+        flex-direction: column-reverse; /* Ícone em cima, endereço embaixo */
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        padding-top: 30px;
+    }
+
+}

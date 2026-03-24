@@ -1,0 +1,440 @@
+/* ================= SOBRE NÓS - HERO SECTION ================= */
+.sobre-hero {
+    /* Deixamos transparente para herdar a cor escura do body no global.css */
+    background-color: transparent; 
+    padding: 200px 0 140px 0; /* Respiro vertical */
+}
+
+/* Subtítulo com a linha ao lado */
+.sobre-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 11px;
+    color: #5D7A9E; /* Azul acinzentado do protótipo */
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.sobre-subtitle .line {
+    width: 32px;
+    height: 1px;
+    background-color: #5D7A9E;
+}
+
+/* Título Principal */
+.sobre-title {
+    font-size: 60px; /* Título bem grande */
+    color: #FFFFFF;
+    font-weight: 300; /* Fonte fina */
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+/* Destaque na palavra "Solução" */
+.sobre-title .highlight {
+    color: #6E9AC8; /* Azul claro do protótipo */
+}
+
+/* Descrição */
+.sobre-description {
+    font-size: 18px;
+    color: #9CA3AF; /* Cinza claro */
+    line-height: 1.6;
+    font-weight: 300; /* Fonte fina */
+    max-width: 650px; /* Limita a largura para a quebra de linha ficar perfeita */
+}
+
+/* ================= NOSSA PROPOSTA SECTION (ATUALIZADA) ================= */
+.proposta-section {
+    background-color: #FFFFFF;
+    padding: 100px 0;
+    text-align: center; /* Centraliza todo o texto do cabeçalho */
+}
+
+/* --- Cabeçalho da Proposta --- */
+.proposta-header {
+    max-width: 900px;
+    margin: 0 auto 80px auto; /* Centraliza a caixa e dá espaço embaixo */
+}
+
+/* Reaproveitando o subtítulo, mas forçando a centralização e cores escuras */
+.proposta-subtitle-dark {
+    color: #1A3E72 !important; 
+    margin-bottom: 24px;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.line-dark {
+    background-color: #1A3E72 !important;
+}
+
+/* Títulos e Textos do Cabeçalho */
+.proposta-header h2 {
+    font-size: 44px;
+    color: #101E35; /* Azul bem escuro */
+    font-weight: 300; /* Fonte fina */
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.proposta-header h2 .highlight-blue {
+    color: #2D5B8E; /* Azul médio/claro do protótipo */
+}
+
+.proposta-header p {
+    font-size: 15px;
+    color: #9CA8B4; /* Cinza claro */
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* --- Grid de Estatísticas (4 Colunas) --- */
+.proposta-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 tamanhos iguais */
+    border-top: 1px solid #EAECEF; /* Linha superior pegando tudo */
+    border-bottom: 1px solid #EAECEF; /* Linha inferior pegando tudo */
+    text-align: left; /* Volta o alinhamento para a esquerda dentro dos cards */
+}
+
+/* Cada Bloco de Informação */
+.stat-card {
+    padding: 40px 30px;
+    border-right: 1px solid #EAECEF; /* Linhas verticais separadoras */
+}
+
+/* Remove a linha direita do último card para não fechar a caixa lateralmente */
+.stat-card:last-child {
+    border-right: none;
+}
+
+.stat-card h3 {
+    font-size: 26px;
+    color: #101E35;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 24px;
+}
+
+.stat-card p {
+    font-size: 13px;
+    color: #9CA8B4;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* ================= SEÇÃO DIRETOR ================= */
+.diretor-section {
+    background-color: #FAFBFC;
+    padding: 100px 0;
+}
+
+.diretor-grid {
+    display: grid;
+    grid-template-columns: 4fr 6fr; 
+    gap: 80px;
+    align-items: stretch; /* ISSO É O MAIS IMPORTANTE: Força a coluna da imagem a esticar até a altura da coluna de texto */
+}
+
+/* --- Imagem e Efeito de Gradiente (CORRIGIDO PARA ALTURA EXATA) --- */
+.diretor-image-wrapper {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    height: 100%; /* Força o container a preencher a altura disponível */
+    /* A altura desse elemento será definida indiretamente pela altura do texto ao lado graças ao grid */
+}
+
+/* Criamos um "fantasma" para forçar uma proporção caso o texto seja muito curto em telas pequenas,
+   mas em telas grandes a imagem seguirá a altura do texto */
+.diretor-image-wrapper::before {
+    content: "";
+    display: block;
+    padding-top: 100%; /* Isso cria um quadrado inicial como base mínima */
+}
+
+.diretor-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Agora a imagem preenche o wrapper 100% */
+    object-fit: cover; /* Mantém a proporção cortando os lados */
+}
+
+.diretor-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Gradiente sobe até o meio da imagem */
+    background: linear-gradient(to top, rgba(16, 30, 53, 0.9) 0%, rgba(16, 30, 53, 0) 100%);
+    pointer-events: none;
+}
+
+/* --- Conteúdo e Textos --- */
+.diretor-content h2 {
+    font-size: 40px;
+    color: #101E35;
+    font-weight: 300;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.diretor-content p {
+    font-size: 14px; /* Fonte ligeiramente menor para caber toda a biografia de forma harmoniosa */
+    color: #9CA8B4;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 24px;
+    text-align: justify; /* Melhora o alinhamento desse bloco grande de texto */
+}
+
+/* --- Botão "Entre em Contato" --- */
+.btn-diretor {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #0F1E36; /* Azul escuro do botão */
+    color: #FFFFFF;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-diretor:hover {
+    background-color: #2D5B8E; /* Fica um pouco mais claro ao passar o mouse */
+}
+
+.btn-diretor .arrow {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+/* ================= ÍCONES DIRETOR ================= */
+
+/* Caixa que segura o botão e os ícones juntos */
+.diretor-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Espaço entre o botão principal e os círculos */
+    margin-top: 24px;
+}
+
+/* Modificamos o botão original para tirar a margem do topo, 
+   já que agora a margem está no .diretor-actions */
+.btn-diretor {
+    margin-top: 0; 
+}
+
+/* Estilo dos círculos dos ícones */
+.icon-diretor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px; /* Tamanho proporcional ao botão */
+    height: 46px;
+    border: 1px solid #EAECEF; /* Borda cinza bem clarinha e elegante */
+    border-radius: 50%;
+    color: #101E35; /* O ícone herda esse azul escuro */
+    background-color: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Efeito ao passar o mouse: inverte as cores e dá um "pulinho" */
+.icon-diretor:hover {
+    background-color: #0F1E36; 
+    border-color: #0F1E36;
+    color: #FFFFFF; /* Ícone fica branco */
+    transform: translateY(-4px); 
+}
+
+/* ================= SEÇÃO CONECTADOS ================= */
+.conectados-section {
+    background-color: #FFFFFF;
+    padding: 100px 0 120px 0; /* Respiro em cima e embaixo antes do footer */
+}
+
+/* --- Cabeçalho --- */
+.conectados-header {
+    text-align: center;
+    max-width: 950px;
+    margin: 0 auto 60px auto; /* Centraliza a caixa e empurra as fotos para baixo */
+}
+
+.conectados-header h2 {
+    font-size: 40px;
+    color: #101E35;
+    font-weight: 300;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.conectados-header h2 .highlight-blue {
+    color: #2D5B8E; /* O mesmo tom de azul usado na seção "Nossa Proposta" */
+}
+
+.conectados-header p {
+    font-size: 15px;
+    color: #9CA8B4;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* --- Galeria de 4 Fotos --- */
+.conectados-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de larguras rigorosamente iguais */
+    gap: 16px; /* Espaço fino entre as fotos, como no protótipo */
+    max-width: 1400px; /* Um pouco mais largo que o container padrão para dar destaque */
+    margin: 0 auto; /* Centraliza a galeria na tela */
+    padding: 0 24px; /* Margem de segurança para telas menores */
+}
+
+/* Cada "caixa" de foto */
+.gallery-item {
+    width: 100%;
+    aspect-ratio: 1 / 1.1; /* Força as fotos a ficarem com uma proporção levemente vertical (quase quadradas) */
+    overflow: hidden; /* Esconde o excesso da foto se ela for muito grande */
+}
+
+/* A foto dentro da caixa */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o corte automático perfeito para não amassar as imagens */
+    display: block;
+}
+
+/* =========================================================================
+   ======================= CORREÇÃO MOBILE - PÁGINA SOBRE ==================
+   ========================================================================= */
+
+@media (max-width: 768px) {
+    
+    /* ================= HERO SECTION ================= */
+    .sobre-hero {
+        padding: 220px 0 80px 0; /* Diminui o espaço vazio gigante do topo/base */
+    }
+
+    .sobre-title {
+        font-size: 36px; /* Reduz de 60px para caber sem quebrar palavras */
+    }
+
+    .sobre-description {
+        font-size: 15px;
+    }
+
+    /* ================= NOSSA PROPOSTA ================= */
+    .proposta-section {
+        padding: 60px 0;
+    }
+
+    .proposta-header {
+        margin-bottom: 40px;
+    }
+
+    .proposta-header h2 {
+        font-size: 28px; /* Título mais equilibrado para telas pequenas */
+    }
+
+    /* Transforma as 4 colunas em 1 coluna (empilhadas) */
+    .proposta-stats-grid {
+        grid-template-columns: 1fr; 
+        border-bottom: none; /* Removemos a linha geral de baixo para tratar individualmente */
+    }
+
+    /* Ajuste das linhas divisórias dos blocos */
+    .stat-card {
+        padding: 30px 20px;
+        border-right: none; /* Tira as linhas verticais... */
+        border-bottom: 1px solid #EAECEF; /* ...e coloca linhas horizontais separando os itens */
+        text-align: center; /* Centraliza o texto das métricas no celular */
+    }
+
+    .stat-card:last-child {
+        border-bottom: 1px solid #EAECEF; /* Garante que o último tenha a linha fechando a caixa */
+    }
+
+    /* ================= DIRETOR ================= */
+    .diretor-section {
+        padding: 60px 0;
+    }
+
+    /* Quebra o layout lado a lado para um embaixo do outro */
+    .diretor-grid {
+        grid-template-columns: 1fr;
+        gap: 40px; /* Diminui o abismo entre foto e texto */
+    }
+
+    /* Joga a foto do diretor para cima do texto e ajusta a altura */
+    .diretor-image-wrapper {
+        order: -1; 
+        width: 100%; /* Estica para ficar alinhado com a largura do texto */
+        height: 220px; /* Trava a altura para formar o retângulo deitado */
+        max-width: 100%; /* Remove qualquer limite de largura anterior */
+        margin: 0 0 20px 0; /* Dá um espacinho entre a foto e o subtítulo "DIRETOR" */
+    }
+
+    .diretor-image-wrapper::before {
+        display: none; /* Remove o controle fantasma do desktop */
+    }
+
+    .diretor-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Preenche o retângulo vermelho */
+        object-position: 50% 30%;
+    }
+
+    .diretor-content h2 {
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+
+    .diretor-content p {
+        text-align: left; /* Evita os "buracos" feios que o text-align: justify cria em telas estreitas */
+        font-size: 15px;
+    }
+
+    .btn-diretor {
+        width: auto; /* Mantém o tamanho ajustado ao texto */
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* ================= CONECTADOS (GALERIA) ================= */
+    .conectados-section {
+        padding: 60px 0 80px 0;
+    }
+
+    .conectados-header {
+        margin-bottom: 40px;
+    }
+
+    .conectados-header h2 {
+        font-size: 28px;
+    }
+
+    /* Transforma a galeria de 4 fotos em uma grade de 2x2 para não ficarem gigantes */
+    .conectados-gallery {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px;
+        padding: 0;
+    }
+
+    .gallery-item {
+        aspect-ratio: 1 / 1; /* Transforma as fotos em quadrados perfeitos no celular */
+    }
+}

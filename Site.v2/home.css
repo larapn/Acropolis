@@ -1,0 +1,579 @@
+html, body {
+    overflow-x: hidden; /* Corta qualquer elemento que tente vazar para a direita ou esquerda */
+    width: 100%; /* Trava a largura da página exatamente no tamanho da tela */
+    margin: 0;
+    padding: 0;
+}
+
+/* Garante que nenhuma imagem jamais quebre a tela */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= HEADER ================= */
+.header {
+    position: absolute; /* Deixa o header "flutuando" sobre a imagem de fundo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 0;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ajuste conforme o tamanho da sua logo */
+    width: auto;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 32px;
+}
+
+.navbar a {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text-gray);
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover, 
+.navbar a.active {
+    color: var(--color-text-white);
+}
+
+.btn-primary {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-white);
+    padding: 10px 24px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1a3a6b;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    /* O linear-gradient aplica uma leve sombra do lado esquerdo para o texto ficar legível caso a imagem seja clara */
+    background-image: linear-gradient(to right, rgba(14, 25, 45, 1.0) 0%, rgba(14, 25, 45, 0.6) 100%), url("Midia/Fotos/Background - Site.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    min-height: 600px;
+    display: flex;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.hero-subtitle {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-text-blue-light);
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 52px;
+    font-weight: 300; /* Deixa a fonte mais fina, como no protótipo */
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--color-text-gray);
+    line-height: 1.5;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.btn-outline {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    color: var(--color-text-white);
+    padding: 12px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    font-size: 16px;
+    backdrop-filter: blur(4px); /* Cria o efeito de vidro fosco no botão */
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ================= QUEM SOMOS SECTION ================= */
+.about-section {
+    background-color: #FFFFFF; /* Fundo branco */
+    padding: 100px 0;
+    color: #333333; /* Sobrescreve a cor global da fonte para ficar escura no fundo branco */
+}
+
+.about-grid {
+    display: grid;
+    /* Aqui mudamos a proporção: a imagem fica com 40% (4fr) e o texto com 60% (6fr) do espaço */
+    grid-template-columns: 4fr 6fr; 
+    gap: 60px;
+    align-items: center; 
+}
+
+/* --- Imagem --- */
+.about-image img {
+    width: 100%;
+    height: 480px; /* Aqui fixamos a altura. Pode aumentar ou diminuir esse valor se precisar */
+    border-radius: 24px; 
+    object-fit: cover; /* Garante que a foto preencha o espaço de 450px sem distorcer */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+}
+
+/* --- Conteúdo Textual --- */
+.section-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #12284C; /* Azul escuro da marca */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 24px;
+}
+
+.section-subtitle .line {
+    width: 24px;
+    height: 1px;
+    background-color: #12284C;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    color: #12284C;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 24px;
+}
+
+.about-content h2 .highlight {
+    color: #3A69A8; /* Azul um pouco mais claro para destacar a palavra "soluções" */
+}
+
+.about-content p {
+    color: #9CA3AF; /* Cinza claro/médio para os parágrafos */
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-weight: 300;
+}
+
+/* --- Divisor e Estatísticas --- */
+.divider {
+    border: none;
+    border-top: 1px solid #E5E7EB; /* Linha cinza bem clarinha */
+    margin: 32px 0;
+}
+
+.about-stats {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.stat-item h3 {
+    font-size: 42px;
+    color: #12284C;
+    font-weight: 300;
+    margin-bottom: 4px;
+}
+
+.stat-item p {
+    font-size: 10px;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.stat-separator {
+    width: 1px;
+    height: 50px;
+    background-color: #E5E7EB;
+}
+
+/* ================= DIFERENCIAIS SECTION ================= */
+.diferenciais-section {
+    background-color: #FFFFFF;
+    padding: 60px 0 100px 0; 
+}
+
+.section-header {
+    margin-bottom: 40px; /* Espaço reduzido entre o título e os cards */
+}
+
+/* Subtítulo */
+.section-header .section-subtitle {
+    color: #1A3E72; 
+    font-size: 11px; /* Fonte menor */
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-header .section-subtitle .line {
+    background-color: #1A3E72;
+    width: 24px;
+    height: 1px;
+}
+
+/* Título Principal */
+.section-header h2 {
+    font-size: 36px; /* Tamanho bem menor, alinhado com o protótipo */
+    color: #101E35; 
+    font-weight: 300; /* Peso 300 para manter fino, mas legível */
+    margin-top: 16px;
+    letter-spacing: -0.5px;
+}
+
+/* Caixa dos Cards */
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid #EAECEF; 
+    background-color: #FFFFFF;
+}
+
+/* Cada Card */
+.diferencial-card {
+    padding: 40px 32px; /* Reduzi bastante o respiro interno para ficar proporcional */
+    border-right: 1px solid #EAECEF;
+}
+
+.diferencial-card:last-child {
+    border-right: none;
+}
+
+/* Números (01, 02...) */
+.diferencial-number {
+    display: block;
+    font-size: 32px; /* Número mais delicado */
+    color: #1A3E72;
+    font-weight: 300; 
+    margin-bottom: 24px; /* Aproximei do título do card */
+}
+
+/* Título do Card */
+.diferencial-card h3 {
+    font-size: 20px; /* Título mais contido */
+    color: #101E35;
+    font-weight: 400; 
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+/* Texto do Card */
+.diferencial-card p {
+    font-size: 14px; /* Texto de apoio menor */
+    color: #9CA8B4; 
+    line-height: 1.6; 
+    font-weight: 300;
+}
+
+/* ================= SERVIÇOS SECTION ================= */
+.servicos-section {
+    background-color: #FFFFFF;
+    padding: 20px 0 100px 0;
+}
+
+/* Container do título + botão na mesma linha */
+.servicos-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    margin-bottom: 40px;
+}
+
+.servicos-header {
+    margin-bottom: 0; /* Tira a margem do header padrão para o wrapper controlar */
+}
+
+/* Botão "Ver todos" */
+.btn-ver-todos {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border: 1px solid #EAECEF;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #1A3E72; /* Azul da marca */
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-ver-todos:hover {
+    background-color: #1A3E72;
+    color: #FFFFFF;
+    border-color: #1A3E72;
+}
+
+/* Grid de 3 colunas */
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Card Individual */
+.servico-card {
+    position: relative;
+    display: block;
+    height: 320px; /* Altura fixa para todos os blocos ficarem idênticos */
+    border-radius: 16px;
+    overflow: hidden; /* Esconde o que passar do limite arredondado */
+    color: #FFFFFF;
+}
+
+/* Imagem de Fundo */
+.servico-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Transição suave para o efeito de mouse */
+}
+
+.servico-card:hover .servico-bg {
+    transform: scale(1.05); /* Leve zoom na imagem ao passar o mouse (efeito elegante) */
+}
+
+/* Gradiente Escuro Embaixo (Overlay) */
+.servico-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* Ocupa 60% da altura do card subindo do zero */
+    background: linear-gradient(to top, rgba(16, 30, 53, 0.95) 0%, rgba(16, 30, 53, 0) 100%);
+    pointer-events: none;
+}
+
+/* Conteúdo do Card (Texto + Botão seta) */
+.servico-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.servico-content h3 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 0;
+    max-width: 80%; /* Evita que o texto encoste no ícone da seta */
+}
+
+/* Ícone Seta Circular */
+.icon-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+.servico-card:hover .icon-arrow {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #FFFFFF;
+}
+
+/* =========================================================================
+   ======================= CORREÇÃO MOBILE - PÁGINA HOME ===================
+   ========================================================================= */
+
+@media (max-width: 768px) {
+    
+    /* 1. Reset Global de Containers - Dá respiro nas bordas do celular */
+    .container {
+        padding: 0 20px;
+    }
+
+    /* ================= HEADER ================= */
+    .header {
+        padding: 15px 0;
+        background-color: transparent; /* Remove o fundo e deixa a imagem aparecer */
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .btn-primary {
+        display: none; /* Esconde o botão do topo para não poluir, focamos no botão do Hero */
+    }
+
+    /* ================= HERO SECTION ================= */
+    .hero {
+        padding-top: 120px; /* Compensa a altura do header empilhado */
+        text-align: center; /* Centraliza tudo no celular */
+        background-position: center;
+    }
+
+    .hero-subtitle {
+        font-size: 10px;
+        margin-bottom: 16px;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 34px; /* Diminui o título de 52px para não quebrar a tela */
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 15px; /* Parágrafo mais delicado */
+        margin-bottom: 30px;
+    }
+
+    .btn-outline {
+        width: auto; /* Remove a largura de 100% e deixa apenas o tamanho do texto */
+        padding: 12px 32px; /* Mantém o mesmo espaçamento elegante das laterais */
+        display: inline-block;
+    }
+
+    /* ================= QUEM SOMOS ================= */
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr; 
+        gap: 30px; /* Diminui um pouco o buraco entre a foto e o texto também */
+    }
+
+    /* Faz a imagem aparecer antes do texto no celular */
+    .about-image {
+        order: -1; 
+    }
+
+    .about-image img {
+        height: 160px; /* Reduz de 300px para 160px, criando o formato da sua marcação vermelha */
+        width: 100%;
+        object-fit: cover;
+        object-position: center; /* Garante que o painel solar fique bem centralizado no corte */
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    /* Estatísticas (Números) */
+    .about-stats {
+        flex-direction: row; /* Volta a deixar os itens lado a lado */
+        align-items: center;
+        gap: 20px; /* Diminui um pouco o espaço entre eles para caber bem na tela */
+    }
+
+    /* Volta a linha divisória para a vertical */
+    .stat-separator {
+        width: 1px; /* Espessura da linha */
+        height: 40px; /* Altura um pouco menor que no computador */
+        margin: 0; /* Remove a margem que tínhamos colocado antes */
+    }
+
+    /* ================= DIFERENCIAIS ================= */
+    .diferenciais-section {
+        padding: 60px 0;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr; /* Transforma as 4 colunas em 1 */
+        border: 1px solid #EAECEF; /* Mantém a borda externa */
+    }
+
+    .diferencial-card {
+        padding: 30px 24px;
+        border-right: none; /* Remove a linha vertical... */
+        border-bottom: 1px solid #EAECEF; /* ...e adiciona uma horizontal para separar os cards */
+    }
+
+    .diferencial-card:last-child {
+        border-bottom: none; /* O último card não precisa de linha embaixo */
+    }
+
+    .diferencial-number {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    /* ================= SERVIÇOS ================= */
+    .servicos-section {
+        padding: 60px 0;
+    }
+
+    .servicos-header-wrapper {
+        flex-direction: column; 
+        align-items: flex-start; /* Garante que o título e o botão fiquem alinhados à esquerda */
+        gap: 20px;
+    }
+
+    .btn-ver-todos {
+        width: auto; /* Remove a largura de 100% e deixa do tamanho do texto */
+        display: inline-flex;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr; /* Transforma as 3 colunas dos cards em 1 */
+        gap: 16px; /* Diminui o espaço entre os cards para ficar mais agrupado */
+    }
+
+    .servico-card {
+        height: 180px; /* Reduz de 280px para 180px, deixando o card bem mais proporcional e retangular */
+    }
+
+    .servico-content {
+        padding: 16px 20px; /* Reduz o respiro interno para se adaptar ao novo tamanho do card */
+    }
+}

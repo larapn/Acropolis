@@ -1,0 +1,281 @@
+/* ================= CONTATO - HERO SECTION ================= */
+.contato-hero {
+    background-color: transparent; 
+    padding: 200px 0 140px 0; 
+}
+
+/* Subtítulo */
+.contato-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 11px;
+    color: #5D7A9E; 
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.contato-subtitle .line {
+    width: 32px;
+    height: 1px;
+    background-color: #5D7A9E;
+}
+
+/* Título Principal */
+.contato-title {
+    font-size: 60px; 
+    color: #FFFFFF;
+    font-weight: 300; 
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.contato-title .highlight {
+    color: #6E9AC8; 
+}
+
+/* Descrição */
+.contato-description {
+    font-size: 18px;
+    color: #9CA3AF; 
+    line-height: 1.6;
+    font-weight: 300; 
+    max-width: 650px; 
+}
+
+/* ================= SEÇÃO DE FORMULÁRIO E MAPA ================= */
+.contato-form-section {
+    background-color: #FFFFFF;
+    padding: 60px 0 120px 0;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 80px; /* Espaço entre o form e o mapa */
+    align-items: start;
+}
+
+/* --- Estilos do Formulário --- */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #4B5563; /* Cor cinza do protótipo */
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+/* Campos de Input e Textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #E5E7EB; /* Borda bem clarinha */
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 14px;
+    color: #111827;
+    background-color: #FFFFFF;
+    font-family: 'Inter', sans-serif; /* Força a fonte correta nos campos */
+    box-sizing: border-box; /* Impede que o campo vaze o layout */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao clicar/digitar no campo */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6E9AC8; /* Borda azul clara da marca */
+    box-shadow: 0 0 0 3px rgba(110, 154, 200, 0.15); /* Efeito de brilho */
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite aumentar apenas para baixo */
+}
+
+/* Botão de Enviar */
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #0F1E36; /* Azul escuro */
+    color: #FFFFFF;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 30px; /* Formato de pílula */
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    margin-top: 8px;
+}
+
+.btn-submit:hover {
+    background-color: #2D5B8E;
+}
+
+/* --- Estilos do Mapa --- */
+.contato-map-wrapper {
+    width: 100%;
+    height: 480px; /* Altura ideal para ficar alinhado com o formulário */
+    border-radius: 16px; /* Cantos arredondados no mapa */
+    overflow: hidden;
+    /* Adiciona uma sombra bem leve para dar destaque, como no print */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+}
+
+/* ================= MODAL DE SUCESSO ================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 20, 36, 0.8); /* Fundo escuro azulado semi-transparente */
+    backdrop-filter: blur(5px); /* Efeito de desfoque elegante */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Fica por cima de absolutamente tudo */
+    
+    /* Escondido por padrão */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Classe que o JS vai adicionar para mostrar o modal */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    
+    /* Animação do modal subindo um pouquinho ao aparecer */
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-icon {
+    width: 64px;
+    height: 64px;
+    background-color: #2D5B8E; /* Azul claro/médio da identidade */
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+}
+
+.modal-content h3 {
+    font-size: 24px;
+    color: #101E35;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.modal-content p {
+    font-size: 15px;
+    color: #6486AD;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-modal-fechar {
+    background-color: #0F1E36;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 36px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-modal-fechar:hover {
+    background-color: #2D5B8E;
+}
+
+/* ================= ESTILOS DE VALIDAÇÃO (ERRO) ================= */
+
+/* Borda vermelha e brilho vermelho para o campo com erro */
+.form-group input.input-error,
+.form-group textarea.input-error {
+    border-color: #EF4444; 
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15); 
+}
+
+/* Esconde o texto de erro por padrão */
+.error-msg {
+    display: block;
+    color: #EF4444; /* Vermelho de alerta */
+    font-size: 13px;
+    margin-top: 6px;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: all 0.3s ease;
+}
+
+/* Mostra o texto de erro quando a classe active é adicionada */
+.error-msg.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
+/* =========================================================================
+   ======================= CORREÇÃO MOBILE - PÁGINA CONTATO ================
+   ========================================================================= */
+
+@media (max-width: 768px) {
+    
+    /* ================= HERO SECTION ================= */
+    .contato-hero {
+        padding: 220px 0 80px 0; 
+    }
+
+    .contato-title {
+        font-size: 36px; 
+    }
+
+    .contato-description {
+        font-size: 15px; 
+    }
+
+    /* ================= FORMULÁRIO E MAPA ================= */
+    .contato-grid {
+        grid-template-columns: 1fr; /* Empilha o formulário em cima do mapa */
+        gap: 60px;
+    }
+
+    .contato-map-wrapper {
+        height: 350px; /* Diminui a altura do mapa no celular */
+    }
+
+    .btn-submit {
+        width: 100%; /* Botão ocupa a largura toda no mobile (opcional, fica muito bom!) */
+        justify-content: center;
+    }
+}
+

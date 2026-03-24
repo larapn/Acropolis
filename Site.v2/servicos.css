@@ -1,0 +1,559 @@
+/* ================= SERVIÇOS - HERO SECTION ================= */
+.servicos-hero {
+    background-color: transparent; 
+    padding: 200px 0 140px 0;
+}
+
+.servicos-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 11px;
+    color: #5D7A9E; 
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.servicos-subtitle .line {
+    width: 32px;
+    height: 1px;
+    background-color: #5D7A9E;
+}
+
+.servicos-title {
+    font-size: 60px; 
+    color: #FFFFFF;
+    font-weight: 300; 
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.servicos-title .highlight {
+    color: #6E9AC8; 
+}
+
+.servicos-description {
+    font-size: 18px;
+    color: #9CA3AF; 
+    line-height: 1.6;
+    font-weight: 300; 
+    max-width: 650px; 
+}
+
+/* ================= ÁREAS DE ATUAÇÃO SECTION ================= */
+.areas-atuacao {
+    background-color: #FFFFFF;
+    padding: 100px 0;
+}
+
+.areas-header {
+    margin-bottom: 50px;
+}
+
+.subtitle-dark {
+    color: #1A3E72 !important;
+}
+
+.line-dark {
+    background-color: #1A3E72 !important;
+}
+
+.areas-header h2 {
+    font-size: 44px;
+    color: #101E35;
+    font-weight: 300;
+    margin-top: 16px;
+    letter-spacing: -1px;
+}
+
+.areas-header h2 .highlight-blue {
+    color: #2D5B8E;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.area-card {
+    background-color: #FFFFFF;
+    border: 1px solid #EAECEF;
+    border-radius: 16px;
+    padding: 32px 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: #F0F4F8;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: #1A3E72;
+}
+
+.area-card h3 {
+    font-size: 18px;
+    color: #101E35;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.area-card p {
+    font-size: 14px;
+    color: #9CA8B4;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* ================= SEÇÃO O QUE OFERECEMOS ================= */
+.oferecemos-section {
+    background-color: #FAFBFC;
+    padding: 100px 0;
+}
+
+.oferecemos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: stretch;
+}
+
+.line-gold {
+    background-color: #C1A68D !important; 
+}
+
+.oferecemos-content h2 {
+    font-size: 40px;
+    color: #101E35;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+.oferecemos-content h2 .highlight-blue {
+    color: #2D5B8E;
+}
+
+.oferecemos-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 16px;
+    margin-bottom: 48px;
+}
+
+.oferecemos-list li {
+    font-size: 14px;
+    color: #9CA8B4;
+    font-weight: 300;
+    position: relative;
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.oferecemos-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #C1A68D;
+}
+
+.btn-servicos {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #0F1E36;
+    color: #FFFFFF;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.btn-servicos:hover {
+    background-color: #2D5B8E;
+}
+
+.oferecemos-image {
+    position: relative;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.oferecemos-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================= SEÇÃO LISTA DE SERVIÇOS ================= */
+.servicos-lista-section {
+    background-color: #FFFFFF;
+    padding: 100px 0 120px 0;
+}
+
+.servicos-lista-header {
+    margin-bottom: 60px;
+}
+
+.servicos-lista-header h2 {
+    font-size: 40px;
+    color: #101E35;
+    font-weight: 300;
+    margin-top: 16px;
+    letter-spacing: -1px;
+}
+
+.servicos-lista-clean {
+    display: flex;
+    flex-direction: column;
+}
+
+.servico-row {
+    display: grid;
+    grid-template-columns: 4fr 6fr; 
+    gap: 40px;
+    padding: 40px 0;
+    border-bottom: 1px solid #EAECEF;
+    align-items: start;
+    
+    /* ADICIONE ESTAS 3 LINHAS ABAIXO: */
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 16px; 
+}
+
+@media (min-width: 769px) {
+    .servico-row:hover {
+        transform: scale(1.03); /* Aumenta o tamanho da linha em 3% */
+        background-color: #FFFFFF; /* Fundo branco sólido para cobrir a linha de baixo */
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06); /* Cria uma sombra sofisticada */
+        padding-left: 32px; /* Adiciona respiro lateral para o texto não bater na borda da sombra */
+        padding-right: 32px;
+        border-bottom-color: transparent; /* Esconde a linha divisória do item atual */
+        z-index: 10; /* Força o item destacado a ficar por cima dos outros */
+    }
+}
+
+.servico-row-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.servico-num {
+    font-size: 44px;
+    color: #2D5B8E;
+    font-weight: 300;
+    line-height: 0.8;
+}
+
+.servico-title {
+    font-size: 18px;
+    color: #101E35;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.servico-row-right p {
+    font-size: 14px;
+    color: #9CA8B4;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* ================= SEÇÃO PROJETOS ================= */
+.projetos-section {
+    background-color: #FAFBFC; 
+    padding: 80px 0 100px 0; 
+}
+
+.projetos-header {
+    margin-bottom: 50px;
+}
+
+.projetos-header h2 {
+    font-size: 34px;
+    color: #101E35; 
+    font-weight: 300;
+    margin-top: 10px;
+    letter-spacing: -1px;
+}
+
+.projetos-header h2 .highlight-blue {
+    color: #6E9AC8; 
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px; 
+}
+
+.projeto-card {
+    background-color: #FFFFFF; 
+    border-radius: 16px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.projeto-img {
+    width: 100%;
+    height: 180px; 
+}
+
+.projeto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.projeto-content {
+    padding: 24px 20px; 
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto-content h3 {
+    font-size: 16px;
+    color: #101E35; 
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.projeto-content p {
+    font-size: 14px;
+    color: #8FA3B8; 
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* ================= SEÇÃO CTA FINAL ================= */
+.cta-final-section {
+    background-color: #0A1424; 
+    padding: 140px 0;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cta-subtitle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.cta-line {
+    width: 25px;
+    height: 1px;
+    background-color: #6486AD;
+    opacity: 0.5;
+}
+
+.cta-subtitle {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: #6486AD;
+    font-weight: 600;
+}
+
+.cta-content h2 {
+    font-size: 44px;
+    color: #FFFFFF;
+    font-weight: 300; 
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.cta-description {
+    font-size: 16px;
+    color: #8FA3B8;
+    margin-bottom: 50px;
+}
+
+.btn-glass-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    color: #FFFFFF;
+    padding: 16px 42px;
+    border-radius: 50px;
+    font-size: 14px;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+/* Esconde o botão toggle por padrão no Desktop */
+.toggle-service {
+    display: none;
+}
+
+/* =========================================================================
+   ======================= CORREÇÃO MOBILE - TUDO CONSOLIDADO ==============
+   ========================================================================= */
+
+@media (max-width: 768px) {
+    
+    .servicos-hero {
+        padding: 220px 0 80px 0; 
+    }
+
+    .servicos-title {
+        font-size: 36px;
+    }
+
+    /* ÁREAS DE ATUAÇÃO */
+    .areas-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .area-card {
+        padding: 20px; 
+    }
+
+    .icon-wrapper {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 16px;
+    }
+
+    /* O QUE OFERECEMOS */
+    .oferecemos-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .oferecemos-image {
+        display: none;
+    }
+
+    
+
+    .oferecemos-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* LISTA DE SERVIÇOS (ACORDEÃO) */
+    .servico-row {
+        grid-template-columns: 1fr; 
+        gap: 12px;
+        padding: 24px 0;
+    }
+
+    .servico-row-left {
+        gap: 16px;
+        align-items: flex-start;
+        display: flex;
+    }
+
+    .servico-num {
+        font-size: 30px;
+        line-height: 1.1;
+    }
+
+    .servico-title {
+        font-size: 16px;
+        flex: 1;
+    }
+
+    /* Ativa o botão no mobile */
+    .toggle-service {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none; /* REMOVE A BORDA */
+        background: none; /* REMOVE O FUNDO */
+        color: #6E9AC8;
+        font-size: 28px; /* Ajuste o tamanho conforme necessário */
+        font-weight: 50; /* Torna o caractere extra fino */
+        line-height: 1;
+        cursor: pointer;
+        padding: 0;
+        margin-right: 16px; /* Adiciona um respiro na direita */
+        transition: color 0.3s ease, font-weight 0.3s ease;
+    }
+
+    /* Lógica de esconder conteúdo para o JS */
+    .servico-row-right {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease;
+    }
+
+    .servico-row.active .servico-row-right {
+        max-height: 500px;
+        opacity: 1;
+        padding-top: 10px;
+    }
+
+    .servico-row.active .toggle-service {
+        color: #2D5B8E; /* Opcional: Escurecer um pouco o azul */
+    }
+
+    /* PROJETOS - CORRIGIDO PARA 1 COLUNA */
+    .projetos-grid {
+        grid-template-columns: 1fr; 
+        gap: 16px;
+    }
+
+    .projeto-img {
+        height: 160px;
+    }
+
+    /* CTA FINAL */
+    .cta-final-section {
+        padding: 80px 0;
+    }
+
+    .cta-content h2 {
+        font-size: 32px;
+    }
+
+    .btn-glass-box {
+        width: auto;
+        justify-content: center;
+    }
+}
