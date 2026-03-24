@@ -316,7 +316,7 @@
                     <p class="cta-description">Nossa equipe está preparada para oferecer o suporte estratégico que seu negócio precisa no setor elétrico.</p>
                     
                     <a href="contato.html" class="btn-glass-box">
-                        Entre em contato <span class="arrow-icon">&#x2197;</span>
+                        Entre em contato 
                     </a>
                 </div>
             </div>
@@ -390,6 +390,37 @@ document.querySelectorAll('.servico-row').forEach(row => {
     });
 });
 </script>
+
+<script>
+        const header = document.querySelector('.header');
+        let ultimaPosicao = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            let posicaoAtual = window.scrollY;
+
+            // 1. Regra de Estilo (Cor e Tamanho)
+            // Se saiu do topo, garante que o menu fique azul e com padding menor.
+            if (posicaoAtual > 50) {
+                header.classList.add('scrolled');
+            } else {
+                // Só volta a ficar transparente e com padding grande no topo absoluto.
+                header.classList.remove('scrolled');
+            }
+
+            // 2. Regra de Movimento (Esconder / Mostrar)
+            if (posicaoAtual > ultimaPosicao && posicaoAtual > 100) {
+                // Rolou para BAIXO: Esconde o menu sem alterar a cor ou o tamanho
+                header.classList.add('hidden');
+            } 
+            else if (posicaoAtual < ultimaPosicao) {
+                // Rolou para CIMA: Mostra o menu
+                header.classList.remove('hidden');
+            }
+
+            ultimaPosicao = posicaoAtual;
+        });
+    </script>
+
 
 </body>
 </html>

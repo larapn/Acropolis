@@ -12,20 +12,6 @@ img {
 }
 
 /* ================= HEADER ================= */
-.header {
-    position: absolute; /* Deixa o header "flutuando" sobre a imagem de fundo */
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 24px 0;
-    z-index: 10;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .logo img {
     height: 50px; /* Ajuste conforme o tamanho da sua logo */

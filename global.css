@@ -38,12 +38,25 @@ ul {
 
 /* ================= HEADER GLOBAL ================= */
 .header {
-    position: absolute; /* Faz o header flutuar sobre o fundo */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     padding: 30px 0;
-    z-index: 10;
+    z-index: 9999; 
+    /* Adicionamos o 'transform' aqui na transição para a subida/descida ser animada */
+    transition: transform 0.3s ease, background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: #0A1424; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
+    padding: 15px 0; 
+}
+
+/* Classe NOVA que o JS vai usar para esconder o menu */
+.header.hidden {
+    transform: translateY(-100%);
 }
 
 .header-container {

@@ -269,5 +269,67 @@
         });
     </script>
 
+    <script>
+        // ==========================================
+        // LÓGICA DO FILTRO DE CATEGORIAS (TAGS)
+        // ==========================================
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.blog-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 1. Muda a cor do botão clicado para ficar "ativo"
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // 2. Descobre qual palavra está escrita no botão (ex: 'Eventos')
+                const filterValue = btn.getAttribute('data-filter');
+
+                // 3. Passa por todos os cards escondendo ou mostrando
+                cards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    
+                    // Se clicou em "Todos" ou se a categoria do card bate com a do botão
+                    if (filterValue === 'all' || filterValue === cardCategory) {
+                        card.style.display = 'flex'; // Volta a aparecer no grid
+                    } else {
+                        card.style.display = 'none'; // Esconde o card
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        const header = document.querySelector('.header');
+        let ultimaPosicao = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            let posicaoAtual = window.scrollY;
+
+            // 1. Regra de Estilo (Cor e Tamanho)
+            // Se saiu do topo, garante que o menu fique azul e com padding menor.
+            if (posicaoAtual > 50) {
+                header.classList.add('scrolled');
+            } else {
+                // Só volta a ficar transparente e com padding grande no topo absoluto.
+                header.classList.remove('scrolled');
+            }
+
+            // 2. Regra de Movimento (Esconder / Mostrar)
+            if (posicaoAtual > ultimaPosicao && posicaoAtual > 100) {
+                // Rolou para BAIXO: Esconde o menu sem alterar a cor ou o tamanho
+                header.classList.add('hidden');
+            } 
+            else if (posicaoAtual < ultimaPosicao) {
+                // Rolou para CIMA: Mostra o menu
+                header.classList.remove('hidden');
+            }
+
+            ultimaPosicao = posicaoAtual;
+        });
+    </script>
+
+
 </body>
 </html>
