@@ -424,6 +424,13 @@
     transition: all 0.3s ease;
 }
 
+/* Efeito Hover do botão da CTA Final */
+.btn-glass-box:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Deixa o fundo um pouco mais visível */
+    border-color: #FFFFFF; /* Deixa a borda 100% branca e nítida */
+    transform: translateY(-2px); /* Dá uma leve e elegante "levantadinha" no botão */
+}
+
 /* Esconde o botão toggle por padrão no Desktop */
 .toggle-service {
     display: none;
