@@ -110,7 +110,7 @@
 }
 
 .area-card p {
-    font-size: 14px;
+    font-size: 15px;
     color: #9CA8B4;
     line-height: 1.6;
     font-weight: 300;
@@ -154,7 +154,7 @@
 }
 
 .oferecemos-list li {
-    font-size: 14px;
+    font-size: 15px;
     color: #9CA8B4;
     font-weight: 300;
     position: relative;
@@ -278,7 +278,7 @@
 }
 
 .servico-row-right p {
-    font-size: 14px;
+    font-size: 14.5px;
     color: #9CA8B4;
     line-height: 1.7;
     font-weight: 300;
@@ -356,7 +356,7 @@
 
 .projeto-content p {
     font-size: 14px;
-    color: #8FA3B8; 
+    color: #9099a2; 
     line-height: 1.6;
     font-weight: 300;
 }
@@ -405,7 +405,7 @@
 
 .cta-description {
     font-size: 16px;
-    color: #8FA3B8;
+    color: #9099a2;
     margin-bottom: 50px;
 }
 
