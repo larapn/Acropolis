@@ -37,6 +37,7 @@ ul {
 }
 
 /* ================= HEADER GLOBAL ================= */
+/* ================= HEADER GLOBAL ================= */
 .header {
     position: fixed; 
     top: 0;
@@ -44,7 +45,6 @@ ul {
     width: 100%;
     padding: 30px 0;
     z-index: 9999; 
-    /* Adicionamos o 'transform' aqui na transição para a subida/descida ser animada */
     transition: transform 0.3s ease, background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -63,11 +63,18 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* ADICIONADO: Necessário para a mágica do centro perfeito */
 }
 
 .logo img {
-    height: 50px; /* Ajuste se a sua logo for maior ou menor */
+    height: 50px; 
     width: auto;
+}
+
+.navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Crava o elemento exatamente no meio da tela */
 }
 
 .navbar ul {
@@ -87,13 +94,24 @@ ul {
     color: var(--color-text-white);
 }
 
+/* ==========================================
+   GRUPO DE AÇÕES (CONTATO + IDIOMAS)
+   ========================================== */
+
+/* Caixinha que abraça o botão e os idiomas para eles não se separarem */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Mantém a distância perfeita entre o botão e o PT|EN */
+}
+
 /* Estilo do Botão "Entre em Contato" do Header */
 .btn-primary-header {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+    background-color: rgba(255, 255, 255, 0.1); 
     color: var(--color-text-white);
     padding: 10px 24px;
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda fina clara */
+    border: 1px solid rgba(255, 255, 255, 0.3); 
     border-radius: 25px;
     font-size: 14px;
     font-weight: 400;
@@ -103,6 +121,42 @@ ul {
 .btn-primary-header:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-color: #FFFFFF;
+}
+
+/* Estilo do Seletor de Idiomas */
+.header-language-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.header-language-switcher a {
+    font-size: 13px; /* Tamanho delicado */
+    font-weight: 500;
+    color: #8FA3B8; /* Cor apagadinha para a língua inativa */
+    text-decoration: none;
+    padding: 4px 8px; /* Padding bem justo */
+    border: 1px solid transparent; 
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* O estilo "Mini Botão" para a língua ativa */
+.header-language-switcher a.active {
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.3); /* Borda branca suave */
+}
+
+/* Efeito sutil ao passar o mouse na língua inativa */
+.header-language-switcher a:hover:not(.active) {
+    color: #FFFFFF;
+}
+
+/* Estilo do separador vertical (|) */
+.header-language-switcher .lang-separator {
+    color: #8FA3B8;
+    margin: 0 2px;
+    font-size: 12px;
+    opacity: 0.5; 
 }
 
 /* ================= FOOTER ================= */

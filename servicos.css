@@ -111,7 +111,7 @@
 
 .area-card p {
     font-size: 15px;
-    color: #9CA8B4;
+    color: #000000;
     line-height: 1.6;
     font-weight: 300;
 }
@@ -155,7 +155,7 @@
 
 .oferecemos-list li {
     font-size: 15px;
-    color: #9CA8B4;
+    color: #101E35;
     font-weight: 300;
     position: relative;
     padding-left: 16px;
@@ -279,7 +279,7 @@
 
 .servico-row-right p {
     font-size: 14.5px;
-    color: #9CA8B4;
+    color: #101E35;
     line-height: 1.7;
     font-weight: 300;
 }
@@ -356,9 +356,9 @@
 
 .projeto-content p {
     font-size: 14px;
-    color: #9099a2; 
+    color: #101E35; 
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 /* ================= SEÇÃO CTA FINAL ================= */

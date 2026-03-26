@@ -89,7 +89,7 @@
 
 .proposta-header p {
     font-size: 15px;
-    color: #9099a2; /* Cinza claro */
+    color: #101E35; /* Cinza claro */
     line-height: 1.7;
     font-weight: 300;
 }
@@ -124,7 +124,7 @@
 
 .stat-card p {
     font-size: 14px;
-    color: #9099a2;
+    color: #101E35;
     font-weight: 300;
     line-height: 1.5;
 }
@@ -190,7 +190,7 @@
 
 .diretor-content p {
     font-size: 14px; /* Fonte ligeiramente menor para caber toda a biografia de forma harmoniosa */
-    color: #9099a2;
+    color: #101E35;
     line-height: 1.7;
     font-weight: 300;
     margin-bottom: 24px;
@@ -287,7 +287,7 @@
 
 .conectados-header p {
     font-size: 15px;
-    color: #9099a2;
+    color: #101E35;
     line-height: 1.7;
     font-weight: 300;
 }

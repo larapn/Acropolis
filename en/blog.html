@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Acropolis Energia</title>
+    <link rel="icon" type="image/png" href="../Midia/Logo/Logo-Azul.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            
+            <a href="index.html" class="logo">
+                <img src="../Midia/Logo/Logo-Branco.png" alt="Acropolis Energia">
+            </a>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">About Us</a></li>
+                    <li><a href="servicos.html">Services</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                
+                <a href="contato.html" class="btn-primary-header">Contact Us</a>
+
+                <div class="header-language-switcher">
+                    <a href="../blog.html" class="lang-pt">PT</a>
+                    <span class="lang-separator">|</span>
+                    <a href="blog.html" class="lang-en active">EN</a>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-hero">
+            <div class="container">
+                
+                <div class="blog-subtitle">
+                    <span class="line"></span> NEWS
+                </div>
+                
+                <h1 class="blog-title">Acropolis <span class="highlight">Blog</span></h1>
+                
+                <p class="blog-description">
+                    Follow our main updates and insights.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="blog-posts-section">
+            <div class="container">
+                
+                <div class="blog-toolbar">
+                    
+                    <div class="blog-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="Events">Events</button>
+                        <button class="filter-btn" data-filter="Articles">Articles</button>
+                        <button class="filter-btn" data-filter="News">News</button>
+                    </div>
+
+                    <div class="blog-sort">
+                        <span>Sort by:</span>
+                        
+                        <div class="custom-dropdown">
+                            <button class="dropdown-btn" type="button">
+                                <span class="dropdown-text">Newest</span>
+                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.5L6 6.5L11 1.5" stroke="#101E35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item active" data-value="newest">Newest</li>
+                                <li class="dropdown-item" data-value="oldest">Oldest</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="blog-grid" id="blog-grid">
+
+                    <article class="blog-card" data-category="News" data-date="2026-03-20">
+                        <div class="card-image">
+                            <span class="card-tag">News</span>
+                            <img src="../Midia/Blog/Avulso/leilao_de_geracao_de_energia_2026.webp" alt="The 2026 Capacity Reserve Auction">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">March 2026</div>
+                            <h3 class="card-title">The 2026 Capacity Reserve Auction</h3>
+                            <p class="card-excerpt">More than impressive numbers, the auction reinforces something essential: having installed capacity is not enough, it is necessary to guarantee...</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_energia-seguranaexaenergaeztica-transiaexaetoenergaeztica-activity-7441487760219082752-dD23" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_energia-seguranaexaenergaeztica-transiaexaetoenergaeztica-activity-7441487760219082752-dD23" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article> 
+                    
+                    <article class="blog-card" data-category="Events" data-date="2026-03-18">
+                        <div class="card-image">
+                            <span class="card-tag">Events</span>
+                            <img src="../Midia/Blog/Avulso/ETHE Energia.jpg" alt="ETHE Energia">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">March 2026</div>
+                            <h3 class="card-title">ETHE Energia at CONIBEN 2026</h3>
+                            <p class="card-excerpt">During the meeting, I had the opportunity to speak with president Gylwander Peres, presenting the event and reinforcing the importance of the participation of companies that contribute to the development and innovation in the energy sector.</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_coniben2026-energia-parcerias-activity-7438168675695681536-1NtO" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_coniben2026-energia-parcerias-activity-7438168675695681536-1NtO" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card" data-category="News" data-date="2026-03-17">
+                        <div class="card-image">
+                            <span class="card-tag">News</span>
+                            <img src="../Midia/Blog/Avulso/Kroma Energia.webp" alt="Kroma Energia">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">March 2026</div>
+                            <h3 class="card-title">An important milestone in Kroma Energia's trajectory.</h3>
+                            <p class="card-excerpt">The company advances towards 500 MW of installed capacity, consolidating a strategic transition and reinforcing its positioning as a generator in the electricity sector.</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_kroma-avan%C3%A7a-rumo-aos-500-mw-e-se-consolida-activity-7437446728385044480-t3-b" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_kroma-avan%C3%A7a-rumo-aos-500-mw-e-se-consolida-activity-7437446728385044480-t3-b" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card" data-category="News" data-date="2026-03-16">
+                        <div class="card-image">
+                            <span class="card-tag">News</span>
+                            <img src="../Midia/Blog/Podcast Equation/Reive Barros - Podcast Equation.png" alt="Equation Group">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">March 2026</div>
+                            <h3 class="card-title">How to become an ANEEL director?</h3>
+                            <p class="card-excerpt">I participated in the "From Engineer to Engineer" podcast by Equation Group (GEq#40) to talk about my trajectory in Electrical Engineering and how it is possible to build a career that unites technique, regulation, and energy planning.</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_como-se-tornar-um-diretor-da-aneel-com-reive-activity-7434509667571130368-UB6i" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_como-se-tornar-um-diretor-da-aneel-com-reive-activity-7434509667571130368-UB6i" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card" data-category="Events" data-date="2026-02-28">
+                        <div class="card-image">
+                            <span class="card-tag">Events</span>
+                            <img src="../Midia/Blog/CONIBEN 2026/Coniben 2026 - Logo.png" alt="CONIBEN 2026">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">February 2026</div>
+                            <h3 class="card-title">CONIBEN 2026</h3>
+                            <p class="card-excerpt">On December 3 and 4, 2026, in Lisbon, Portugal, CONIBEN will once again gather the main names of the energy sector for another edition that promises to expand connections, business, and impacts.</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_coniben-energia-transiaexaetoenergaeztica-activity-7427649894124843011-pL0M" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_coniben-energia-transiaexaetoenergaeztica-activity-7427649894124843011-pL0M" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card" data-category="Events" data-date="2026-02-27">
+                        <div class="card-image">
+                            <span class="card-tag">Events</span>
+                            <img src="../Midia/Blog/OAB/Comissão de Direito de Energia da OABPE.jpg" alt="OABPE Energy Law Commission">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">February 2026</div>
+                            <h3 class="card-title">OAB/PE Energy Law Commission</h3>
+                            <p class="card-excerpt">Yesterday, the OAB/PE Energy Law Commission promoted a high-level technical event, dedicated to the comparative analysis of energy regulation in Brazil, the United Kingdom, and the European Union.</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/janine-santos-_ontem-a-comiss%C3%A3o-de-direito-de-energia-da-ugcPost-7415388746688229376-BIdh" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/janine-santos-_ontem-a-comiss%C3%A3o-de-direito-de-energia-da-ugcPost-7415388746688229376-BIdh" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card" data-category="Events" data-date="2025-12-27">
+                        <div class="card-image">
+                            <span class="card-tag">Events</span>
+                            <img src="../Midia/Blog/CONIBEN 2026/Coniben 2025.jpg" alt="Coniben 2025">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">December 2025</div>
+                            <h3 class="card-title">Coniben 2025</h3>
+                            <p class="card-excerpt">We concluded CONIBEN - Ibero-American Energy Conference 2025 with a strong sense of accomplishment. It was two intense days, with 11 panels gathering representatives from Brazil, Portugal, and Spain to discuss decisive themes such as energy transition, innovation, infrastructure, technology, and public policies.</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_coniben-2025-refor%C3%A7a-integra%C3%A7%C3%A3o-entre-brasil-activity-7401628573326827521-2_Ch" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_coniben-2025-refor%C3%A7a-integra%C3%A7%C3%A3o-entre-brasil-activity-7401628573326827521-2_Ch" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card" data-category="News" data-date="2025-11-27">
+                        <div class="card-image">
+                            <span class="card-tag">News</span>
+                            <img src="../Midia/Blog/Avulso/Apresentacao Suape.jpg" alt="Suape">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">November 2025</div>
+                            <h3 class="card-title">World's first 100% ethanol turbine</h3>
+                            <p class="card-excerpt">Today I had the opportunity to witness, in Suape, a milestone for renewable energy: the presentation of the world's first turbine capable of generating electricity 100% from ethanol, developed by Wärtsilä and installed by Suape Energia.</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_suape-activity-7396827681184616448-0IZs" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_suape-activity-7396827681184616448-0IZs" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="Events" data-date="2025-11-25">
+                        <div class="card-image">
+                            <span class="card-tag">Events</span>
+                            <img src="../Midia/Blog/Avulso/ENERGIA & DATA CENTER.jpg" alt="ENERGY & DATA CENTER">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">November 2025</div>
+                            <h3 class="card-title">ENERGY & DATA CENTER</h3>
+                            <p class="card-excerpt">It was a great pleasure to participate in the event "Energy & Data Center - Requirements, Challenges and Opportunities for Brazil", organized by the Pensar Energia Institute, which gathered public and private sector representatives to discuss a strategic theme for the country's future.</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_energia-datacenter-infraestrutura-activity-7394715643515682817-RuHN" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_energia-datacenter-infraestrutura-activity-7394715643515682817-RuHN" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="News" data-date="2025-11-20">
+                        <div class="card-image">
+                            <span class="card-tag">News</span>
+                            <img src="../Midia/Blog/Avulso/Data centers no Brasil.webp" alt="Data centers in Brazil">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">November 2025</div>
+                            <h3 class="card-title">Data centers in Brazil</h3>
+                            <p class="card-excerpt">In the interview with Jornal do Commercio, I highlighted that the advancement of data centers in Brazil is an inevitable movement of the digital age — but also a great opportunity for the energy sector.</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_expans%C3%A3o-de-data-centers-acende-alerta-sobre-activity-7390010714175918081-F0Gm" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_expans%C3%A3o-de-data-centers-acende-alerta-sobre-activity-7390010714175918081-F0Gm" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="News" data-date="2025-11-18">
+                        <div class="card-image">
+                            <span class="card-tag">News</span>
+                            <img src="../Midia/Blog/Avulso/entrevista ao Jornal do Commercio.jpg" alt="Excess energy is an opportunity">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">November 2025</div>
+                            <h3 class="card-title">Excess energy is an opportunity</h3>
+                            <p class="card-excerpt">In an interview with Jornal do Commercio and the Rádio Jornal debate, I highlighted that Brazil is experiencing a unique moment: we have a lot of available energy — and this should be seen as an opportunity, not a problem.</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_excesso-de-energia-precisa-ser-vista-como-activity-7389008142417690624-QNFl" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_excesso-de-energia-precisa-ser-vista-como-activity-7389008142417690624-QNFl" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="News" data-date="2025-10-30">
+                        <div class="card-image">
+                            <span class="card-tag">News</span>
+                            <img src="../Midia/Blog/Avulso/O futuro do setor energético.png" alt="The future of the energy sector">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">October 2025</div>
+                            <h3 class="card-title">The future of the energy sector</h3>
+                            <p class="card-excerpt">Next Monday, October 27, I will have the pleasure of participating in a special edition of the Super Manhã Debate, promoted by Rádio Jornal FM 90.3, with the theme "The future of the energy sector".</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_debate-o-futuro-do-setor-energ%C3%A9tico-activity-7387615066650492928-Brob" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_debate-o-futuro-do-setor-energ%C3%A9tico-activity-7387615066650492928-Brob" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="Articles" data-date="2025-10-27">
+                        <div class="card-image">
+                            <span class="card-tag">Articles</span>
+                            <img src="../Midia/Blog/Avulso/O clima mudou.png" alt="The climate has changed">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">October 2025</div>
+                            <h3 class="card-title">The climate has changed — and crisis management needs to change too</h3>
+                            <p class="card-excerpt">Climate change is no longer a distant prediction. Today, heat waves, prolonged droughts, floods, and severe storms are part of our daily lives — impacting cities, services, and the lives of millions of people.</p>
+                            
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/posts/reivebarros_o-desafio-%C3%A9-implementar-uma-gest%C3%A3o-coordenada-activity-7384983432042287104-2s7q" target="_blank" class="read-more">Read more</a>
+                                <a href="https://www.linkedin.com/posts/reivebarros_o-desafio-%C3%A9-implementar-uma-gest%C3%A3o-coordenada-activity-7384983432042287104-2s7q" target="_blank" class="icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+    <footer class="footer">
+            <div class="container">
+                
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="../Midia/Logo/Logo-Branco.png" alt="Acropolis Energia">
+                    </div>
+
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>NAVIGATION</h4>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="sobre.html">About Us</a></li>
+                                <li><a href="servicos.html">Services</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>SERVICES</h4>
+                            <ul>
+                                <li><a href="servicos.html">Energy Planning</a></li>
+                                <li><a href="servicos.html">Institutional Relations</a></li>
+                                <li><a href="servicos.html">Advisory for Investors</a></li>
+                                <li><a href="servicos.html">Innovation and Transition</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h4>CONTACT</h4>
+                            <ul>
+                                <li><a href="contato.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>Avenida República do Líbano, 251, Room 708 — Tower C — Pina, Recife — PE, Brazil</p>
+                    
+                    <a href="https://www.linkedin.com/in/reivebarros/" class="social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.06 20.45H3.56V9h3.5v11.45zM5.31 7.44c-1.13 0-2.04-.92-2.04-2.05s.91-2.04 2.04-2.04 2.04.92 2.04 2.04-.91 2.05-2.04 2.05zm15.14 13.01h-3.5v-5.56c0-1.33-.03-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94v5.65h-3.5V9h3.36v1.56h.05c.47-.89 1.62-1.83 3.33-1.83 3.56 0 4.22 2.34 4.22 5.39v6.33z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+            </div>
+        </footer>
+
+    <script>
+        // Lógica do Dropdown Customizado e Ordenação
+        const dropdown = document.querySelector('.custom-dropdown');
+        const dropdownBtn = dropdown.querySelector('.dropdown-btn');
+        const dropdownItems = dropdown.querySelectorAll('.dropdown-item');
+        const dropdownText = dropdown.querySelector('.dropdown-text');
+        
+        const blogGrid = document.querySelector('.blog-grid');
+
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('open');
+        });
+
+        function sortCards(order) {
+            const cards = Array.from(blogGrid.querySelectorAll('.blog-card'));
+
+            cards.sort((a, b) => {
+                const dateA = new Date(a.getAttribute('data-date'));
+                const dateB = new Date(b.getAttribute('data-date'));
+
+                if (order === 'newest') {
+                    return dateB - dateA; 
+                } else {
+                    return dateA - dateB; 
+                }
+            });
+
+            blogGrid.innerHTML = '';
+            cards.forEach(card => blogGrid.appendChild(card));
+        }
+
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', () => {
+                dropdownItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                dropdownText.textContent = item.textContent;
+                dropdown.classList.remove('open');
+                
+                const orderValue = item.getAttribute('data-value');
+                sortCards(orderValue);
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+    </script>
+
+    <script>
+        // LÓGICA DO FILTRO DE CATEGORIAS (TAGS)
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.blog-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || filterValue === cardCategory) {
+                        card.style.display = 'flex'; 
+                    } else {
+                        card.style.display = 'none'; 
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        const header = document.querySelector('.header');
+        let ultimaPosicao = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            let posicaoAtual = window.scrollY;
+
+            if (posicaoAtual > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            if (posicaoAtual > ultimaPosicao && posicaoAtual > 100) {
+                header.classList.add('hidden');
+            } 
+            else if (posicaoAtual < ultimaPosicao) {
+                header.classList.remove('hidden');
+            }
+
+            ultimaPosicao = posicaoAtual;
+        });
+    </script>
+
+</body>
+</html>
