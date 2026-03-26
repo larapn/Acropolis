@@ -56,7 +56,7 @@
 /* --- Cabeçalho da Proposta --- */
 .proposta-header {
     max-width: 900px;
-    margin: 0 auto 80px auto; /* Centraliza a caixa e dá espaço embaixo */
+    margin: 0 auto; /* Centraliza a caixa e dá espaço embaixo */
 }
 
 /* Reaproveitando o subtítulo, mas forçando a centralização e cores escuras */
