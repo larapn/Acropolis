@@ -258,8 +258,14 @@ ul {
     .header-container {
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: 20px; /* Dá um respiro legal entre a logo, o menu e as letrinhas */
         padding: 20px 0;
+    }
+
+    /* DESLIGA A MÁGICA DO DESKTOP PARA NÃO SOBREPOR A LOGO */
+    .navbar {
+        position: static;
+        transform: none;
     }
 
     .navbar ul {
@@ -272,6 +278,17 @@ ul {
 
     .navbar ul li a {
         font-size: 14px;
+    }
+
+    /* Centraliza a caixinha que segura o botão e o PT|EN */
+    .header-actions {
+        justify-content: center;
+        margin: 0;
+    }
+
+    /* Remove a margem extra do idioma para ele ficar bem no centro */
+    .header-language-switcher {
+        margin: 0;
     }
 
     /* Esconde o botão de "Entre em contato" no header para não poluir a telinha */
